@@ -1,9 +1,5 @@
 package com.ashiato45.test2;
 
-import java.io.IOException;
-import java.net.Socket;
-import java.net.UnknownHostException;
-
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -19,22 +15,13 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class MainActivity extends ActionBarActivity{
-
+	SocketManager socketManager;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		try {
-			Socket soc = new Socket("192.168.1.230", 6667);
-		} catch (UnknownHostException e) {
-			// TODO 自動生成された catch ブロック
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO 自動生成された catch ブロック
-			e.printStackTrace();
-		}
-
+		socketManager = new SocketManager();
 
 /*		TextView t = (TextView)findViewById(R.id.maintext);
 		t.setText("This is Tom.");*/
@@ -104,5 +91,6 @@ public class MainActivity extends ActionBarActivity{
 		}
 		return super.onOptionsItemSelected(item);
 	}
+
 
 }

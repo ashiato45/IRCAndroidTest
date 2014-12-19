@@ -35,10 +35,8 @@
         android:id="@+id/mainScroll2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/mainButton"
-        android:layout_alignLeft="@+id/maintext"
-        android:layout_alignRight="@+id/mainButton"
-        android:layout_below="@+id/maintext"
+        android:layout_alignBottom="@+id/mainButton"
+        android:layout_alignLeft="@+id/mainEdit"
         android:text="TextView" />
 
 </RelativeLayout>
